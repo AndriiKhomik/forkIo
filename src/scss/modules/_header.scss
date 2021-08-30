@@ -1,0 +1,334 @@
+
+.hamburger-menu {
+    display: block;
+        @include tablet {
+            position: absolute;
+            margin-top: 70px;
+            width: calc(20% + 300px);
+        }
+        @include desktop {
+            margin-top: -18px;
+            width: 44%;
+            margin-left: 50%;
+            transform: translateX(-46%);
+        }
+        @media (min-width: 1372px) {
+            width: 700px;
+            margin-left: 35%;
+        }
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    visibility: visible;
+    right: 20px;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 40px;
+    right: calc(4% + 7px);
+
+    width: 22px;
+    height: 26px;
+
+    cursor: pointer;
+    z-index: 1;
+    @include tablet {
+        display: none;
+    }
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #FFFFFF;
+
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -7px;
+    width: 14px;
+    right: 0;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 7px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+
+    top: 106px;
+    right: -100%;
+
+    margin: 0;
+
+    list-style: none;
+    padding-left: 0;
+
+    background-color: #F5F5F5;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+    transition-duration: .25s;
+        @include tablet {
+            position: static;
+            text-align: center;
+            background-color: transparent;
+            box-shadow: none;
+            @include flex();
+        }
+        @include desktop {
+
+        }
+}
+
+.menu__item {
+    display: block;
+    padding: 28px 50px 20px 34px;
+
+    color: #333333;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+
+    text-decoration: none;
+
+    transition-duration: .25s;
+
+    position: relative;
+
+    @include tablet {
+        color: $secondary-color;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 0;
+    }
+
+}
+
+.menu__item::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 8px;
+    height: 54px;
+    background-color: $secondary-color;
+    opacity: 0;
+
+    transition: 1s;
+}
+
+.menu__item:hover{
+    color: $secondary-color;
+    @include tablet {
+        color: $main-color;
+    }
+}
+
+.menu__item:hover::after {
+    opacity: 1;
+    @include tablet {
+        opacity: 0;
+    }
+}
+
+.header {
+    position: relative;
+    background-image: url('../img/main-bg.png');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 86vh;
+    &__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 1;
+        color: $main-color;
+        margin-top: 50px;
+        @include tablet {
+            margin-top: 60px;
+            font-size: 72px;
+        }
+        @include desktop {
+            font-size: 82px;
+            margin-top: 32px;
+        }
+    }
+    &__text {
+        color: $secondary-color;
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 18px;
+        @include tablet {
+            font-size: 24px;
+        }
+        @include desktop {
+            font-size: 30px;
+            line-height: 1;
+        }
+    }
+    &__subtext {
+        color: #848E97;
+        font-size: 14px;
+        line-height: 1;
+        margin-top: 14px;
+    }
+    &__bottom-block {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50px;
+        @include tablet {
+            bottom: -62px;
+            min-width: 80%;
+        }
+    }
+    &__btn-bottom {
+        padding: 12px 30px;
+        font-size: 18px;
+        line-height: 20px;
+        transition: 0.6s;
+        min-width: 290px;
+        margin-bottom: 14px;
+        @include tablet {
+            padding: 20px 58px;
+            font-size: 21px;
+            line-height: 23px;
+            margin-bottom: 18px;
+        }
+    }
+    &__btn-bottom:hover {
+        color: $secondary-color;
+        background-color: $main-color;
+        border: 1px solid $secondary-color;
+    }
+    &__bottom-block_desc {
+        font-size: 14px;
+        line-height: 14px;
+        color: #848E97;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+    p {
+        display: none;
+        color: $secondary-color;
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 16px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        margin-left: 16px;
+        transition: all 0.6s;
+        @include tablet {
+            display: block;
+        }
+    }
+}
+
+.white-logo {
+    position: absolute;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.purpul-logo {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.logo:hover .logo-text{
+    color: $main-color;
+}
+
+.logo:hover,
+.logo p:hover {
+    color: $main-color;
+}
+
+.logo:hover .purpul-logo {
+    opacity: 0
+}
+
+.logo:hover .white-logo {
+    opacity: 1;
+}
+
+.nav {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: #27262A;
+    @include flex($align: center, $justify: space-around);
+        @include tablet {
+            padding-top: 20px;
+            padding-bottom: 48px;
+        }
+        @include desktop {
+            background-color: transparent;
+            padding-top: 30px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+    &__btn {
+        padding: 10px 22px;
+        font-size: 15px;
+        line-height: 15px;
+        transition: 0.6s;
+            @include tablet {
+                padding: 10px 32px;
+            }
+    }
+    &__btn:hover {
+        color: $secondary-color;
+        background-color: $main-color;
+        border: 1px solid $secondary-color;
+    }
+}
+
+
+
+
+
+
+
+

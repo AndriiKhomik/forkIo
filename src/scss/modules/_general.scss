@@ -1,0 +1,47 @@
+// font-family: 'Lato', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+body, ul, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    @include desktop {
+        max-width: 1200px;
+    }
+}
+
+.btn {
+    color: $main-color;
+    background-color:  $secondary-color;
+    border-radius: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.title {
+    color: $main-color;
+    text-align: center;
+    font-size: 36px;
+    line-height: 48px;
+        @include tablet {
+            font-size: 42px;
+        }
+        @include desktop {
+            font-size: 48px;
+            line-height: 50px;
+        }
+}
+

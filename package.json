@@ -1,0 +1,44 @@
+{
+  "name": "fork_step_project",
+  "version": "1.0.0",
+  "description": "responsive web design",
+  "main": "",
+  "browserslist": [
+    "last 20 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start",
+    "build": "gulp"
+  },
+  "author": "Andrii Khomik/Andrey Protsenko",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "delete": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-purgecss": "^4.0.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.36.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/AndriiKhomik/fork_step-project_protsenko_khomik.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/AndriiKhomik/fork_step-project_protsenko_khomik/issues"
+  },
+  "homepage": "https://gitlab.com/AndriiKhomik/fork_step-project_protsenko_khomik#readme"
+}

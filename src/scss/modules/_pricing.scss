@@ -1,0 +1,175 @@
+.footer{
+    background-image: url("../img/backgroundPricing.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.footer-content{
+    min-width: 300px;
+    max-width: 1180px;
+    padding: 0 10px 0 10px;
+    margin: 0 auto;
+    h3{
+        padding-top: 14px;
+        padding-bottom: 32px;
+        font-family: Montserrat;
+        @include fontsStyle(400, 28px, 42px, #FFFFFF);
+        text-align: center;
+        @include tablet {
+            padding-top: 88px;
+            font-size: 34px;
+            line-height: 44px;
+        }
+        @include desktop{
+            font-size: 48px;
+            line-height: 50px;
+        }
+    }
+}
+.footer-content-bloks{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+        padding-bottom: 94px;
+    }
+    &__price{
+        font-family: Montserrat;
+        @include fontsStyle(400, 60px, 90px, #FFFFFF);
+        margin-top: 30px;
+        margin-bottom: 5%;
+    }
+    &__price-third-blok{
+        font-family: Montserrat;
+        @include fontsStyle(400, 82px, 90px, #FFFFFF);
+        margin-top: 15px;
+        margin-bottom: 16px;
+    }
+    &__deskription{
+        font-family: Montserrat;
+        @include fontsStyle(400, 14px, 16px, #FFFFFF);
+    }
+    &__deskription::after{
+        content: '';
+        display: block;
+        width: 60px;
+        height: 5px;
+        background: #8D81AC;
+        display: flex;
+        margin-top: 10%;
+        margin-left: 38%;
+        margin-bottom: 10%;
+    }
+    &__text{
+        font-family: Montserrat;
+        @include fontsStyle(400, 16px, 18px, #FFFFFF);
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 12%;
+    }
+    &__text-third-blok{
+        font-family: Montserrat;
+        @include fontsStyle(400, 16px, 18px, #FFFFFF);
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 15%;
+        height: 10%;
+        margin-bottom: 15%;
+    }
+    &__blok{
+        margin-top: 20px;
+        width: 257px;
+        height: 457px;
+        text-align: center;
+        background: #FFFFFF;
+        mix-blend-mode: normal;
+        background: rgba(252, 250, 250, 0.11);
+        @include tablet {
+            width: 45%;
+            height: 430px;
+            margin-left: 10px;
+            margin-top: 30px;
+        }
+        @media (min-width: 615px){
+            width: 257px;
+            height: 457px;
+            padding-left: 0px;
+        }
+        @include desktop{
+            width: 23%;
+        }
+        @media (min-width: 1160px){
+            width: 257px;
+        }
+        h4{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 97px;
+        @include fontsStyle(400, 24px, 24px, #FFFFFF);
+        margin: 0;
+        background: rgba(252, 250, 250, 0.06);
+        }
+        &:last-child{
+            margin-bottom: 5px;
+        }
+        &:first-child{
+            @media (min-width: 825px){
+                margin-left: 90px;
+            }
+            @include desktop{
+                margin-left: 0px;
+            }
+        }
+        &:nth-child(2){
+            @media (min-width: 825px){
+                margin-right: 90px;
+            }
+            @include desktop{
+                margin-right: 0px;
+            }
+        }
+        button{
+            height: 45px;
+            width: 163px;
+            border-radius: 25px;
+            border: none;
+            background: rgba(252, 250, 250, 0.15);
+            @include fontsStyle(400, 15px, 15px, #FFFFFF);
+            font-family: Montserrat;
+            margin-top: 5%;
+        }
+    }
+    &__third-blok{
+        width: 299px;
+        height: 560px;
+        background: rgba(70, 48, 72, 0.85);
+        @include tablet {
+            width: 50%;
+            height: 500px;
+            margin-left: 0px;
+
+        }
+        @media (min-width: 615px){
+            width: 299px;
+            height: 560px;
+            margin-left: -28px;
+        }
+        @include desktop{
+            width: 27%;
+            margin-left: 10px;
+        }
+        @media (min-width: 1160px){
+            width: 299px;
+        }
+        h4{
+            width: 100%;
+            height: 111px;
+            mix-blend-mode: normal;
+            background: rgba(0, 0, 0, 0.11);
+            color: #FFFFFF;
+        }
+    }
+}

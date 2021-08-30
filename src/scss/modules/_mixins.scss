@@ -1,0 +1,41 @@
+@mixin flex($align: center, $justify: space-between) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin grid($size, $columnAmount, $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($size, $columnAmount));
+    gap: $gap;
+}
+
+@mixin title-bold-montserat() {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin large-tablet {
+    @media (min-width: #{$large-tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin fontsStyle($weight, $size, $height, $color){
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
