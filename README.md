@@ -1,2 +1,5 @@
 # forkIo
-forkIo project
+forkIo project - responsive landing page with using:
+- gulp
+- pug
+- scss
