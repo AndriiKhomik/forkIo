@@ -1,5 +1,5 @@
 # forkIo
-[Live Demo] (https://andriikhomik.github.io/forkIo_prod/)
+[Live Demo](https://andriikhomik.github.io/forkIo_prod/)
 
 forkIo project - responsive landing page with using:
 - gulp
